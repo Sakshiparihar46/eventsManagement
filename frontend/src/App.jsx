@@ -3,11 +3,11 @@ import Events from "./pages/events";
 import EventDetails from "./pages/eventsDetails";
 import Booking from "./pages/booking";
 import UpdateEvent from "./pages/edit";
-import Boilerplate from "./pages/boilerplate";
-import AdminAddEvent from "./pages/addEvent";
+import Boilerplate from "./pages/boilerplate.jsx";
+import AdminAddEvent from "./pages/addEvent.jsx";
 import "./pages/boilerplate.css";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Login from "./pages/login.jsx";
+import Register from "./pages/register.jsx";
 
 function App() {
   return (
