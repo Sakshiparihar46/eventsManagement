@@ -10,24 +10,25 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "https://your-frontend.netlify.app", 
+    origin: "http://localhost:5173", 
     credentials: true
   })
 );
 
-app.use(session({
-  name: "sid",
-  secret: "secret123",
-  resave: true,
-  saveUninitialized: false,
-  cookie: {
-    httpOnly: true,
-    secure: false,       
-    sameSite: "none",   
-    maxAge: 24 * 60 * 60 * 1000
-  }
-}));
-
+app.use(
+  session({
+    name: "sid",
+    secret: "secret123",
+    resave: true,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: false,
+      sameSite: false,
+      maxAge: 24 * 60 * 60 * 1000 
+    }
+  })
+);
 
 app.use(passport.initialize());
 app.use(passport.session());
