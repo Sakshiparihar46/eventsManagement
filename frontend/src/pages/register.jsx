@@ -17,7 +17,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await API.post("/auth/register.jsx", form);
+      await API.post("/auth/register", form);
       alert("Registration successful");
       navigate("/login");
     } catch (err) {
