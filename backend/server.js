@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "https://event-ggwu.onrender.com", 
+    origin: "*", 
     credentials: true
   })
 );
@@ -36,7 +36,7 @@ app.use(passport.session());
 app.use("/auth", require("./routes/authRoutes"));
 app.use("/events", require("./routes/eventRoutes"));
 app.use("/bookings", require("./routes/bookingRoutes"));
-
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+let port=process.env.Port;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
