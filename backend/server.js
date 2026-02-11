@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "*", 
+    origin: "https://event-ggwu.onrender.com", 
     credentials: true
   })
 );
